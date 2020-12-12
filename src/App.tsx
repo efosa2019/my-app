@@ -1,24 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useGameState } from './components/GameState';
+import { Log } from './components/Log';
+import { Board } from './components/Board';
+import { Row, Column } from './components/Layout';
 
 function App() {
+  const {
+    gameState,
+    current,
+    xIsNext,
+    jumpTo,
+    winner,
+    handleClick,
+  } = useGameState();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+          <Row gap={20}>
+      <Column gap={20}>
+        <div>{
+          winner
+            ? `Congrats!! Player ${winner} You Won`
+            : `Next Player is ${xIsNext ? 'X' : 'O'}`
+        }</div>
+        <Board board={current} onClick={handleClick} />
+      </Column>
+      <Log history={gameState.history} jumpTo={jumpTo}/>
+    </Row>
+      
     </div>
   );
 }
