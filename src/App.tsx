@@ -15,7 +15,7 @@ function App() {
   } = useGameState();
   return (
     <div>
-          <Row gap={20}>
+      <Row gap={20}>
       <Column gap={20}>
         <div>{
           winner

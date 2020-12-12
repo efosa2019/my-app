@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Value } from './GameState';
 
@@ -8,7 +8,7 @@ const StyledSquare = styled.button`
   border: 2px solid #0a0710;
   background: #fff;
   padding: 0;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: bold;
   cursor: pointer;
 `;
