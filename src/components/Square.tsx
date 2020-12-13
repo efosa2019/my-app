@@ -8,7 +8,7 @@ const StyledSquare = styled.button`
   border: 2px solid #0a0710;
   background: #fff;
   padding: 0;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: bold;
   cursor: pointer;
 `;

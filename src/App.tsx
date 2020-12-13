@@ -15,6 +15,7 @@ function App() {
   } = useGameState();
   return (
     <div>
+      <h1>Welcome To Tic Tac Toe</h1>
       <Row gap={20}>
       <Column gap={20}>
         <div>{
